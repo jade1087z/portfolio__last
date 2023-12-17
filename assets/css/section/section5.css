@@ -1,0 +1,124 @@
+#section5 {
+    padding: 120px 50px 0 50px;
+}
+
+#section5 .profile__inner {
+    display: flex;
+    width: 100%;
+    
+}
+
+#section5 .profile__inner .left {
+    width: 50%;
+}
+
+#section5 .profile__inner .left .profile__img {
+    width: 40vw;
+    height: 49vw;
+    background-color: #000;
+    border-radius: 20px;
+    background-image: url("../../img/Group\ 47.png");
+}
+
+#section5 .profile__inner .right {
+    width: 50%;
+}
+
+#section5 .profile__inner .right .contents__wrap {
+    width: 100%;
+    height: 43vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-s-core);
+}
+
+#section5 .profile__inner .right .contents__wrap .contents {
+    display: flex;
+}
+
+#section5 .profile__inner .right .contents__wrap .contents .num {
+    width: 20%;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+#section5 .profile__inner .right .contents__wrap .contents .contents__text {
+    width: 80%;
+    padding: 0.3rem 0 0 0rem;
+}
+
+#section5 .profile__inner .right .contents__wrap .contents .contents__text .contents__title {
+    font-size: 1.3vw;
+    margin-bottom: 30px;
+}
+
+#section5 .profile__inner .right .contents__wrap .contents .contents__text p {
+    width: 100%;
+    max-width: 700px;
+}
+
+#section5 .profile__inner .right .contents__wrap .contents .contents__text .contents__desc {
+    font-size: 0.9vw;
+    color: var(--font-color);
+}
+
+#section5 .profile__inner .right .profile__more {
+    margin: 80px 0 0 180px;
+    
+    width: 30%;
+}
+
+#section5 .profile__inner .right .profile__more a {
+    position: relative;
+    display: flex;
+    font-family: var(--font-Roboto);
+    transition: all 0.2s;
+    color: var(--black600);
+    
+}
+
+#section5 .profile__inner .right .profile__more a::before,
+#section5 .profile__inner .right .profile__more a::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 1px);
+    height: 2px;
+    left: 1%;
+    bottom: -23%;
+}
+
+#section5 .profile__inner .right .profile__more a:before {
+    background-color: var(--white100);
+}
+
+#section5 .profile__inner .right .profile__more a:after {
+    background-color: var(--black600);
+    transform: scaleX(0);
+    transition: all 0.3s;
+}
+
+#section5 .profile__inner .right .profile__more a:hover {
+    color: var(--black100);
+}
+
+#section5 .profile__inner .right .profile__more a:hover::after {
+    transform: scaleX(1);
+}
+
+#section5 .profile__inner .right .profile__more a svg {
+    position: absolute;
+    right: 2%;
+    top: 24%;
+    width: 0.8vw;
+    height: 0.8vw;
+    animation: arrowAnimation2 1.4s infinite;
+}
+
+#section5 .profile__inner .right .profile__more a svg polygon {
+    fill: var(--black600);
+}
+
+#section5 .profile__inner .right .profile__more a:hover polygon {
+    fill: var(--black100);
+}

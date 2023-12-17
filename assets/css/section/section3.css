@@ -1,0 +1,93 @@
+@import "../setting/animation.css";
+#section3 {
+    padding: 350px 50px 0 50px;
+   
+}
+#section3 .work__inner .work__wrap {
+    
+}
+#section3 .work__inner .work__wrap .work__title {
+    position: relative;
+    
+}
+.sec3__text {
+    font-family: 'GmarketSans';
+    text-align: left;
+    font-size: 9vw;
+    line-height: 105%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+}
+.sec3__text .img {
+    width: 12vw;
+    height: 7.4vw;
+    background-image: url(https:////source.unsplash.com/500x500/?water);
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: absolute;
+    left: 0.6vw;
+    top: 0.2vw;
+    border-radius: 10px;
+}
+
+.sec3__intro {
+    display: flex;
+
+}
+.left {
+    width: 50%;
+}
+
+.right .desc2 a,
+.right .desc2 {
+    text-align: right;
+    font-family: "IropkeBatang";
+    line-height: 1.6;
+    font-size: 1.13rem;
+    color: #202020;
+    font-weight: normal;
+}
+
+.right .desc2 a{
+    position: relative;
+    pointer-events: auto;
+    letter-spacing: 1px;
+    font-family: var(--font-chosun);
+    font-size: 1rem;
+    display: inline-block;
+    width: 35%;
+    text-align: left;
+}
+.right .desc2 a svg {
+    position: absolute;
+    right: 0%;
+    top: 30%;
+}
+.right .desc2 a::before,
+.right .desc2 a::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 103%;
+    transform: scaleX(1); /* 초기 상태를 1로 설정 */
+    transform-origin: left; /* 변환의 기준점을 왼쪽으로 설정 */
+    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86); /* 기본 상태에 transition 추가 */
+}
+
+.right .desc2 a:hover::before {
+    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
+    transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
+    transition-delay: 0s;
+}
+.right .desc2 a:hover::after {transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
+    transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
+    transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */}
+/*  */
+

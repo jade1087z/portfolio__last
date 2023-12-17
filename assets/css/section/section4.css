@@ -1,0 +1,28 @@
+#section4 {
+    padding-top: 150px;
+}
+
+#section4 .project__wrap {
+}
+#section4 .project__wrap .project {
+}
+#section4 .project__wrap .project .flex {
+    display: flex;
+    padding: 0 50px;
+}
+
+#section4 .project__wrap .project .flex .left {
+    width: 50%;
+}
+#section4 .project__wrap .project .flex .left .num {
+    font-size: 10vw;
+    font-family: var(--font-s-core);
+}
+
+#section4 .project__wrap .project .flex .right {
+    width: 50%;
+}
+
+#section4 .project__wrap .project .flex .right h4 {
+    font-size: 2.5vw;
+}
