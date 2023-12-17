@@ -1,11 +1,17 @@
 .HIDDEN {
     overflow: hidden;
 }
+.HIDDEN.title {
+
+}
+
 .NUMHIDDEN {
     overflow: hidden;
     height: 25vh;
-    margin-top: -20px;
+    margin-top: -50px;
 }
+
+
 .RELATIVEHIDDEN {
     position: absolute;
     overflow: hidden;   
