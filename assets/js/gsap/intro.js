@@ -1,4 +1,3 @@
-
 const timelineBTT1 = gsap.timeline({ paused: true });
 const timelineBTT4 = gsap.timeline({ paused: true });
 
@@ -19,7 +18,7 @@ const animateBTT1_2_3 = (item, y) => {
         {
             autoAlpha: 1,
             y: 0,
-            duration: 1.5,
+            duration: 1,
             overwrite: "auto",
             ease: "power2.inOut",
         }
@@ -34,7 +33,7 @@ const animateBTT1_2_3 = (item, y) => {
             },
             {
                 x: 13 + "vw",
-                duration: 1.5,
+                duration: 1,
                 overwrite: "auto",
                 ease: "power2.inOut",
             }
@@ -48,13 +47,13 @@ const animateBTT4 = (item) => {
     timelineBTT4.fromTo(
         item,
         {
-            x: -100,
+            x: -250,
             autoAlpha: 1,
         },
         {
             x: 0,
             autoAlpha: 1,
-            duration: 2,
+            duration: 2.5,
             overwrite: "auto",
             ease: "power2.inOut",
         }
@@ -89,16 +88,14 @@ gsap.utils.toArray(".reveal").forEach((item) => {
     });
 });
 
-
-
 const targets = gsap.utils.toArray(".split");
 
-targets.forEach(target => {
+targets.forEach((target) => {
     let SplitClient = new SplitType(target, { type: "lines, words, chars" });
     let lines = SplitClient.lines;
     let words = SplitClient.words;
     let chars = SplitClient.chars;
-})
+});
 
 gsap.set(".sec1__text .img", { opacity: 0 });
 gsap.set("#header", { opacity: 0, y: -100 });
@@ -109,19 +106,66 @@ gsap.set(".sec1__intro .line:nth-child(4) .char", { opacity: 0, y: 10, x: 10 });
 
 setTimeout(() => {
     let tl = gsap.timeline();
-    tl.to(".sec1__text .img", { opacity: 1, duration: 0.5, ease: "expo.out" });
+    tl.to(".sec1__text .img", {
+        opacity: 1,
+        duration: 0.5,
+        ease: "expo.out",
+    });
     tl.to("#header", { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" });
-    tl.to(".sec1__intro .line:nth-child(1) .char", { opacity: 1, y: 0, x: 0, stagger: 0.01, duration: 0.8, ease: "expo.out" }, "-=0.5");
-    tl.to(".sec1__intro .line:nth-child(2) .char", { opacity: 1, y: 0, x: 0, stagger: 0.01, duration: 0.8, ease: "expo.out" }, "-=0.5");
-    tl.to(".sec1__intro .line:nth-child(3) .char", { opacity: 1, y: 0, x: 0, stagger: 0.01, duration: 0.8, ease: "expo.out" }, "-=0.5");
-    tl.to(".sec1__intro .line:nth-child(4) .char", { opacity: 1, y: 0, x: 0, stagger: 0.01, duration: 0.8, ease: "expo.out" }, "-=0.5");
-}, 4000)
+    tl.to(
+        ".sec1__intro .line:nth-child(1) .char",
+        {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            stagger: 0.01,
+            duration: 0.8,
+            ease: "expo.out",
+        },
+        "-=0.5"
+    );
+    tl.to(
+        ".sec1__intro .line:nth-child(2) .char",
+        {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            stagger: 0.01,
+            duration: 0.8,
+            ease: "expo.out",
+        },
+        "-=0.5"
+    );
+    tl.to(
+        ".sec1__intro .line:nth-child(3) .char",
+        {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            stagger: 0.01,
+            duration: 0.8,
+            ease: "expo.out",
+        },
+        "-=0.5"
+    );
+    tl.to(
+        ".sec1__intro .line:nth-child(4) .char",
+        {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            stagger: 0.01,
+            duration: 0.8,
+            ease: "expo.out",
+        },
+        "-=0.5"
+    );
+}, 2000);
 
-
-window.addEventListener('resize', function() {
+window.addEventListener("resize", function () {
     if (window.innerWidth <= 600) {
-        const items = document.querySelectorAll('.BTT1');
-        items.forEach(item => {
+        const items = document.querySelectorAll(".BTT1");
+        items.forEach((item) => {
             gsap.to(item, {
                 x: 13 + "vw",
                 duration: 0.02,
@@ -129,9 +173,9 @@ window.addEventListener('resize', function() {
                 ease: "power2.inOut",
             });
         });
-    } else if(window.innerWidth > 600) {
-        const items = document.querySelectorAll('.BTT1');
-        items.forEach(item => {
+    } else if (window.innerWidth > 600) {
+        const items = document.querySelectorAll(".BTT1");
+        items.forEach((item) => {
             gsap.to(item, {
                 x: 13 + "vw",
                 duration: 0.02,

@@ -1,17 +1,14 @@
 @import "../setting/animation.css";
 #section3 {
     padding: 350px 50px 0 50px;
-   
 }
 #section3 .work__inner .work__wrap {
-    
 }
 #section3 .work__inner .work__wrap .work__title {
     position: relative;
-    
 }
 .sec3__text {
-    font-family: 'GmarketSans';
+    font-family: "GmarketSans";
     text-align: left;
     font-size: 9vw;
     line-height: 105%;
@@ -23,19 +20,21 @@
 .sec3__text .img {
     width: 12vw;
     height: 7.4vw;
-    background-image: url(https:////source.unsplash.com/500x500/?water);
+    /* background-image: url(https:////source.unsplash.com/500x500/?water);
     background-size: cover;
-    background-position: center;
-    display: block;
+    background-position: center; */
     position: absolute;
     left: 0.6vw;
     top: 0.2vw;
+}
+.sec3__text .img > div img {
     border-radius: 10px;
+    width: 12vw;
+    height: 7.4vw;
 }
 
 .sec3__intro {
     display: flex;
-
 }
 .left {
     width: 50%;
@@ -51,7 +50,7 @@
     font-weight: normal;
 }
 
-.right .desc2 a{
+.right .desc2 a {
     position: relative;
     pointer-events: auto;
     letter-spacing: 1px;
@@ -86,8 +85,9 @@
     transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
     transition-delay: 0s;
 }
-.right .desc2 a:hover::after {transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
+.right .desc2 a:hover::after {
+    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
     transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
-    transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */}
+    transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */
+}
 /*  */
-
