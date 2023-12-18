@@ -1,6 +1,5 @@
 @import "../setting/animation.css";
 #section2 {
-   
     padding: 0 0 100px;
     position: relative;
     overflow: hidden;
@@ -16,7 +15,7 @@
     white-space: nowrap;
 }
 
-#section2 .imgWrap .slider {
+#section2 .imgWrap > div {
     width: 800px;
     height: 500px;
     margin: 10px;
@@ -24,41 +23,18 @@
     background-position: center center;
     border-radius: 10px;
 }
-swiper-container {
-    width: 100%;
-    height: 100%;
-  }
 
-  swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-#section2 .imgWrap .mySwiper .slider.s1 {
+#section2 .imgWrap > div:nth-child(1) {
     background-image: url(https://images.unsplash.com/photo-1635438909544-3f1e87c206eb?q=80&w=4074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
-#section2 .imgWrap .slider.s2 {
+#section2 .imgWrap > div:nth-child(2) {
     background-image: url(https://images.unsplash.com/photo-1702221422565-60f734cd90b1?q=80&w=4000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
-#section2 .imgWrap .slider.s3 {
+#section2 .imgWrap > div:nth-child(3) {
     background-image: url(https://images.unsplash.com/photo-1683009427619-a1a11b799e05?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
-#section2 .imgWrap .slider.s4 {
-    background-image: url(https://images.unsplash.com/photo-1683009427619-a1a11b799e05?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-}
-
 .text-title {
     position: relative;
 }
@@ -71,10 +47,13 @@ swiper-container {
     line-height: 1.2;
     text-align: right;
 }
-
+.text-title .desc2.last {
+    padding: 3% 5% 0 10%;
+}
 #desc1-1 {
     padding-top: 0;
 }
+
 .text-title .svg {
 }
 .text-title .svg svg {
@@ -102,20 +81,29 @@ swiper-container {
     margin-bottom: 20px;
 }
 
-.text-title .desc2 a{
+.text-title .desc2 a {
     position: relative;
     pointer-events: auto;
     letter-spacing: 1px;
-    font-family: var(--font-chosun);
+    font-family: "Roboto Condensed";
+    font-weight: 400;
     font-size: 1rem;
     display: inline-block;
-    width: 35%;
+    width: 30.5rem;
     text-align: left;
 }
 .text-title .desc2 a svg {
     position: absolute;
     right: 0%;
     top: 30%;
+}
+.text-title .desc2 a > div {
+    position: absolute;
+    right: 0%;
+    top: 30%;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
 }
 .text-title .desc2 a::before,
 .text-title .desc2 a::after {
@@ -137,6 +125,8 @@ swiper-container {
     transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
     transition-delay: 0s;
 }
-.text-title .desc2 a:hover::after {transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
+.text-title .desc2 a:hover::after {
+    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
     transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
-    transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */}
+    transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */
+}

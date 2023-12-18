@@ -54,10 +54,11 @@
     position: relative;
     pointer-events: auto;
     letter-spacing: 1px;
-    font-family: var(--font-chosun);
+    font-family: "Roboto Condensed";
+    font-weight: 400;
     font-size: 1rem;
     display: inline-block;
-    width: 35%;
+    width: 10.5rem;
     text-align: left;
 }
 .right .desc2 a svg {

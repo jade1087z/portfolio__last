@@ -30,6 +30,11 @@ body {
     display: none;
 }
 
+.underLine {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
 /* 스크롤바 막대 색상 및 모양 변경 */
 ::-webkit-scrollbar-thumb {
     background: white; /* 스크롤바 막대 색상 */
