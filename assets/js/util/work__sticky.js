@@ -4,7 +4,7 @@ window.addEventListener('scroll', function() {
 
     elements.forEach(function(element) {
         const scrollHeight = window.pageYOffset;
-        const elementTop = element.getBoundingClientRect().top + scrollHeight + 700; // 여기에서 100을 뺍니다.
+        const elementTop = element.getBoundingClientRect().top + scrollHeight + 300; // 여기에서 100을 뺍니다.
         const elementHeight = element.offsetHeight;
 
         if (scrollHeight + windowHeight <= elementTop) {

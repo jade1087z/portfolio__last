@@ -1,6 +1,6 @@
 @import "../setting/animation.css";
 #section3 {
-    padding: 350px 50px 0 50px;
+    padding: 350px 0 0 0;
 }
 #section3 .work__inner .work__wrap {
 }
@@ -33,15 +33,21 @@
     height: 7.4vw;
 }
 
-.sec3__intro {
+/* .sec3__intro {
     display: flex;
-}
-.left {
+} */
+/* .left {
     width: 50%;
 }
 
+.right {
+    width: 50%;
+} */
+
+
 .right .desc2 a,
 .right .desc2 {
+    padding: 3% 5% 0 10%;
     text-align: right;
     font-family: "IropkeBatang";
     line-height: 1.6;
@@ -56,10 +62,9 @@
     letter-spacing: 1px;
     font-family: "Roboto Condensed";
     font-weight: 400;
-    font-size: 1rem;
-    display: inline-block;
+    font-size: 0.9rem;
     width: 10.5rem;
-    text-align: left;
+    padding: 0;
 }
 .right .desc2 a svg {
     position: absolute;

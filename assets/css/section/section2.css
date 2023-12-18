@@ -47,9 +47,6 @@
     line-height: 1.2;
     text-align: right;
 }
-.text-title .desc2.last {
-    padding: 3% 5% 0 10%;
-}
 #desc1-1 {
     padding-top: 0;
 }
@@ -87,9 +84,9 @@
     letter-spacing: 1px;
     font-family: "Roboto Condensed";
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.8rem;
     display: inline-block;
-    width: 30.5rem;
+    width: 18rem;
     text-align: left;
 }
 .text-title .desc2 a svg {
