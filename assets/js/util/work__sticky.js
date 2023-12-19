@@ -1,90 +1,39 @@
-const isVisible = [];
-const colors = [];
-const startPoints = [];
-function isElementVisible(element) {
-    const rect = element.getBoundingClientRect();
-    const elemTop = rect.top;
-    const elemBottom = rect.bottom;
+$(document).ready(function() {
+    var elements = [
+        {el: $(".project.p1.work"), top: 0, height: 0},
+        {el: $(".project.p2.work"), top: 0, height: 0},
+    ]; // 대상 요소들
 
-    // Partially visible elements return true
-    const isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-    return isVisible;
-}
+    elements.forEach(function(element) {
+        element.el.css('background-color', 'rgb(255,255,255)');
+        element.top = element.el.offset().top + 100// 대상 요소의 상단 위치에서 100px 아래
+        element.height = element.el.outerHeight() * 2; // 대상 요소의 높이를 두 배로 설정
+    });
 
-window.addEventListener("scroll", function () {
-    const elements = document.querySelectorAll(".work");
-    const windowHeight = window.innerHeight;
-    let visibleElementIndex = -1;
+    $(window).on("scroll", function() {
+        var scrollPosition = $(window).scrollTop(); // 스크롤 위치
 
-    elements.forEach(function (element, index) {
-        const scrollHeight = window.pageYOffset;
-        if (isElementVisible(element)) {
-            visibleElementIndex = index;
-        }
-        const elementHeight = element.offsetHeight;
-        const elementTop =
-            element.getBoundingClientRect().top + scrollHeight + 700;
+        elements.forEach(function(element) {
+            var relativeScroll = scrollPosition - element.top; // 대상 요소에 대한 상대적인 스크롤 위치
 
-        // Save the start point of color change for each section
-        startPoints[index] = elementTop - windowHeight;
+            if (relativeScroll >= 0 && relativeScroll <= element.height) {
+                // 대상 요소가 화면에 나타날 때부터 사라질 때까지의 스크롤 비율
+                var scrollPercentage = relativeScroll / (element.height - 100);
 
-        // Calculate the ratio based on the start point of color change
-        let ratio = (scrollHeight - startPoints[index]) / elementHeight;
+                var red = Math.max(217, Math.floor((1 - scrollPercentage) * 255));
+                var green = Math.max(217, Math.floor((1 - scrollPercentage) * 255));
+                var blue = Math.max(217, Math.floor((1 - scrollPercentage) * 255));
 
-        if (ratio < 0) {
-            ratio = 0;
-        } else if (ratio > 1) {
-            ratio = 1;
-        }
+                var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
-        let colorValue = 255;
-        colorValue -= Math.floor(ratio * 150);
-
-        // Ensure colorValue is not less than 217
-        if (colorValue < 217) {
-            colorValue = 217;
-        }
-
-        // Only update background color if element is visible
-        if (isVisible[index]) {
-            colors[index] =
-                "rgb(" +
-                colorValue +
-                ", " +
-                colorValue +
-                ", " +
-                colorValue +
-                ")";
-            element.style.backgroundColor = colors[index];
-            console.log(`Element ${index} is visible, color: ${colors[index]}`);
-        } else {
-            // Reset the color of the section when it is not visible
-            colors[index] = "rgb(255, 255, 255)";
-            element.style.backgroundColor = colors[index];
-            console.log(
-                `Element ${index} is not visible, color: ${colors[index]}`
-            );
-        }
-
-        if (scrollHeight + windowHeight <= elementTop) {
-            element.style.backgroundColor = "rgb(255, 255, 255)";
-            return;
-        }
-
-        if (visibleElementIndex !== -1) {
-            colors[visibleElementIndex] =
-                "rgb(" +
-                colorValue +
-                ", " +
-                colorValue +
-                ", " +
-                colorValue +
-                ")";
-            elements[visibleElementIndex].style.backgroundColor =
-                colors[visibleElementIndex];
-            console.log(
-                `Element ${visibleElementIndex} is visible, color: ${colors[visibleElementIndex]}`
-            );
-        }
+                element.el.css('background-color', color); // 배경색 변경
+            } 
+            else if (relativeScroll < 0) {
+                element.el.css('background-color', 'rgb(255,255,255)'); // 스크롤이 대상 요소의 상단 100px 이하일 경우 배경색을 흰색으로 설정
+            }
+            else {
+                element.el.css('background-color', 'rgb(255,255,255)'); // 스크롤이 대상 요소의 하단 이상일 경우 배경색을 흰색으로 설정
+            }
+        });
     });
 });
