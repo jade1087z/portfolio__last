@@ -5,7 +5,6 @@
 #section5 .profile__inner {
     display: flex;
     width: 100%;
-    
 }
 
 #section5 .profile__inner .left {
@@ -13,11 +12,13 @@
 }
 
 #section5 .profile__inner .left .profile__img {
-    width: 40vw;
-    height: 49vw;
+    width: 31vw;
+    height: 40vw;
     background-color: #000;
     border-radius: 20px;
     background-image: url("../../img/Group\ 47.png");
+    background-position: center;
+    background-size: contain;
 }
 
 #section5 .profile__inner .right {
@@ -48,7 +49,13 @@
     padding: 0.3rem 0 0 0rem;
 }
 
-#section5 .profile__inner .right .contents__wrap .contents .contents__text .contents__title {
+#section5
+    .profile__inner
+    .right
+    .contents__wrap
+    .contents
+    .contents__text
+    .contents__title {
     font-size: 1.3vw;
     margin-bottom: 30px;
 }
@@ -58,14 +65,19 @@
     max-width: 700px;
 }
 
-#section5 .profile__inner .right .contents__wrap .contents .contents__text .contents__desc {
+#section5
+    .profile__inner
+    .right
+    .contents__wrap
+    .contents
+    .contents__text
+    .contents__desc {
     font-size: 0.9vw;
     color: var(--font-color);
 }
 
 #section5 .profile__inner .right .profile__more {
     margin: 80px 0 0 180px;
-    
     width: 30%;
 }
 
@@ -75,7 +87,6 @@
     font-family: var(--font-Roboto);
     transition: all 0.2s;
     color: var(--black600);
-    
 }
 
 #section5 .profile__inner .right .profile__more a::before,
@@ -110,8 +121,7 @@
     position: absolute;
     right: 2%;
     top: 24%;
-    width: 0.8vw;
-    height: 0.8vw;
+
     animation: arrowAnimation2 1.4s infinite;
 }
 
