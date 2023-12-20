@@ -1,8 +1,7 @@
 :root {
     --mainfont-gmarket: "GmarketSans";
-    --font-s-core: "SCoreDream";
-    --font-nanum: "nanumSquareNeo";
-    --font-chosun: "ChosunNm";
+
+    --font-iro:"IropkeBatang";
     --font-Roboto: "Roboto Condensed";
     font-family: var(--mainfont-gmarket);
     font-size: 16px;
@@ -27,6 +26,7 @@
     --white100: #eaeaea;
     --line-color: #d2dadf;
     --desc-color: #888a8b;
+    --font-color: #888a8b;
 }
 
 @media (max-width: 1510px) {

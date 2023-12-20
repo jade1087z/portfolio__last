@@ -24,7 +24,7 @@
     border-radius: 5px;
     background-image: url("../../img/Group\ 47.png");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     overflow: hidden;
 }
 
@@ -35,7 +35,6 @@
 #section5 .profile__inner .right .contents__wrap {
     width: 100%;
     font-family: var(--font-s-core);
-    
 }
 
 #section5 .profile__inner .right .contents__wrap .contents {
@@ -43,9 +42,9 @@
     padding: 4% 0;
 }
 #section5 .profile__inner .right .contents__wrap .contents.c1 {
-    
+    padding-top: 2%;
 }
-#section5 .profile__inner .right .contents__wrap .contents.c4 {
+#section5 .profile__inner .right .contents__wrap .contents.c3 {
   
 }
 
@@ -79,6 +78,7 @@
 
 #section5 .profile__inner .right .profile__more {
     width: 30%;
+    margin-top: 150px;
 }
 
 #section5 .profile__inner .right .profile__more a {
