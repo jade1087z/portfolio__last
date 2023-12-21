@@ -63,7 +63,7 @@ const animateBTT4 = (item) => {
 };
 
 // ScrollTrigger를 사용하여 스크롤 위치에 따라 애니메이션 실행
-gsap.utils.toArray(".reveal").forEach((item) => {
+gsap.utils.toArray(".reveal1").forEach((item) => {
     hide(item);
 
     let animation;
@@ -83,85 +83,24 @@ gsap.utils.toArray(".reveal").forEach((item) => {
         end: "bottom top",
         markers: true,
         onEnter: () => {
-            animation.play();
+            if (item.classList.contains("BTT1")) {
+                animation.play().then(() => {
+                    if (document.querySelector(".BTT4")) {
+                        animateBTT4(document.querySelector(".BTT4")).play();
+                    }
+                });
+            } else {
+                animation.play();
+            }
         },
     });
 });
 
-const targets = gsap.utils.toArray(".split");
 
-targets.forEach((target) => {
-    let SplitClient = new SplitType(target, { type: "lines, words, chars" });
-    let lines = SplitClient.lines;
-    let words = SplitClient.words;
-    let chars = SplitClient.chars;
-});
 
-gsap.set(".sec1__text .img", { opacity: 0 });
-gsap.set("#header", { opacity: 0, y: -100 });
-gsap.set(".sec1__intro .line:nth-child(1) .char", { opacity: 0, y: 10, x: 10 });
-gsap.set(".sec1__intro .line:nth-child(2) .char", { opacity: 0, y: 10, x: 10 });
-gsap.set(".sec1__intro .line:nth-child(3) .char", { opacity: 0, y: 10, x: 10 });
-gsap.set(".sec1__intro .line:nth-child(4) .char", { opacity: 0, y: 10, x: 10 });
 
-setTimeout(() => {
-    let tl = gsap.timeline();
-    tl.to(".sec1__text .img", {
-        opacity: 1,
-        duration: 0.5,
-        ease: "expo.out",
-    });
-    tl.to("#header", { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" });
-    tl.to(
-        ".sec1__intro .line:nth-child(1) .char",
-        {
-            opacity: 1,
-            y: 0,
-            x: 0,
-            stagger: 0.01,
-            duration: 0.8,
-            ease: "expo.out",
-        },
-        "-=0.5"
-    );
-    tl.to(
-        ".sec1__intro .line:nth-child(2) .char",
-        {
-            opacity: 1,
-            y: 0,
-            x: 0,
-            stagger: 0.01,
-            duration: 0.8,
-            ease: "expo.out",
-        },
-        "-=0.5"
-    );
-    tl.to(
-        ".sec1__intro .line:nth-child(3) .char",
-        {
-            opacity: 1,
-            y: 0,
-            x: 0,
-            stagger: 0.01,
-            duration: 0.8,
-            ease: "expo.out",
-        },
-        "-=0.5"
-    );
-    tl.to(
-        ".sec1__intro .line:nth-child(4) .char",
-        {
-            opacity: 1,
-            y: 0,
-            x: 0,
-            stagger: 0.01,
-            duration: 0.8,
-            ease: "expo.out",
-        },
-        "-=0.5"
-    );
-}, 2000);
 
+// 반응형
 window.addEventListener("resize", function () {
     if (window.innerWidth <= 600) {
         const items = document.querySelectorAll(".BTT1");

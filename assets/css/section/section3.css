@@ -1,6 +1,6 @@
 @import "../setting/animation.css";
 #section3 {
-    padding: 350px 0 0 0;
+    padding: 350px 50px 50px 50px;
 }
 #section3 .work__inner .work__wrap {
 }
@@ -84,3 +84,28 @@
     transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */
 }
 /*  */
+
+
+
+@media (max-width: 700px) {
+    
+    /* #section3 {
+        padding: 120px 2px 50px 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #section3 br {
+        display: none;
+    }
+
+    .sec3__text {
+    }
+
+    .sec3__intro p {
+        display: none;
+    } */
+}

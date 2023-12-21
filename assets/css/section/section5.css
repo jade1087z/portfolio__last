@@ -1,134 +1,109 @@
 #section5 {
-    padding: 120px 50px 0 50px;
-    height: 100vh;
-}
-#section5 .profile__tit {
-    font-size: 7.9vw;
-    letter-spacing: -1px;
-    font-weight: bold;
+    padding-top: 150px;
 }
 
 #section5 .profile__inner {
+    padding: 0 50px;
+}
+
+#section5 .profile__inner .propile__title {
+    margin-bottom: 8.5%;
+}
+#section5 .profile__inner .propile__title .profile__tit {
+    font-size: 9vw;
+    line-height: 105%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.profile__flex {
     display: flex;
-    width: 100%;
 }
 
-#section5 .profile__inner .left {
+.profile__flex .left {
+    width: 40%;
+}
+.profile__img {}
+.profile__flex .right {
     width: 50%;
-}
-
-#section5 .profile__inner .left .profile__img {
-    width: 36vw;
-    height: 40vw;
-    background-color: #000;
-    border-radius: 5px;
-    background-image: url("../../img/Group\ 47.png");
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-}
-
-#section5 .profile__inner .right {
-    width: 50%;
-}
-
-#section5 .profile__inner .right .contents__wrap {
-    width: 100%;
-    font-family: var(--font-s-core);
-    
-}
-
-#section5 .profile__inner .right .contents__wrap .contents {
     display: flex;
-    padding: 4% 0;
-}
-#section5 .profile__inner .right .contents__wrap .contents.c1 {
-    
-}
-#section5 .profile__inner .right .contents__wrap .contents.c4 {
-  
-}
+    flex-direction: column;
+    justify-content: space-around;
 
-#section5 .profile__inner .right .contents__wrap .contents .num {
+}
+.profile__flex .right .profile {
+    display: flex;
+}
+.profile__flex .right .profile .sub__numb {
     width: 10%;
-    font-size: 1.8vw;
-    font-weight: 600;
-    line-height: 1;
+    font-family: var(--font-Roboto);
+    font-size: 1.15vw;
+    font-weight: bold;
 }
-
-#section5 .profile__inner .right .contents__wrap .contents .contents__text {
-    width: 80%;
+.profile__flex .right .profile  .sub__text {
+    width: 90%;
 }
-
-.contents__wrap .contents .contents__text .contents__title {
-    font-size: 1.1vw;
-}
-
-#section5 .profile__inner .right .contents__wrap .contents .contents__text p {
-    width: 100%;
-    max-width: 700px;
+.profile__flex .right .profile  .sub__text .sub__title {
+    font-size: 1.15vw;
+    margin-bottom: 2%;
     font-family: var(--font-Roboto);
 }
-
-.contents__wrap .contents .contents__text .contents__desc {
-    font-size: 0.83vw;
-    line-height: 1.8;
-    color: var(--font-color);
+.profile__flex .right .profile  .sub__text .sub__desc {
+    font-size: 0.9vw;
     font-family: var(--font-iro);
+    color: var(--desc-color);
+    width: 90%;
+    line-height: 1.7;
+}
+.profile__more {
+    padding-left: 11%;
 }
 
-#section5 .profile__inner .right .profile__more {
-    width: 30%;
-}
-
-#section5 .profile__inner .right .profile__more a {
-    position: relative;
+.profile__more a {
     display: flex;
+    position: relative;
+    pointer-events: auto;
+    letter-spacing: 1px;
     font-family: var(--font-Roboto);
-    transition: all 0.2s;
-    color: var(--black600);
+    width: 15vw;
+    line-height: 1.6;
+    color: #202020;
+    font-weight: normal;
 }
-
-#section5 .profile__inner .right .profile__more a::before,
-#section5 .profile__inner .right .profile__more a::after {
+.profile__more a p {
+    font-size: 0.8vw;
+}
+.profile__more a svg {
+    position: absolute;
+    right: 1%;
+    bottom: -16%;
+    width: 1.35vw;
+    height:1.5vw;
+}
+.profile__more a::before,
+.profile__more a::after {
     content: "";
     position: absolute;
-    width: calc(100% - 1px);
-    height: 2px;
-    left: 1%;
-    bottom: -23%;
+    background-color: #000;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 103%;
+    transform: scaleX(1); /* 초기 상태를 1로 설정 */
+    transform-origin: left; /* 변환의 기준점을 왼쪽으로 설정 */
+    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86); /* 기본 상태에 transition 추가 */
 }
 
-#section5 .profile__inner .right .profile__more a:before {
-    background-color: var(--white100);
+.profile__more a:hover::before {
+    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
+    transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
+    transition-delay: 0s;
 }
-
-#section5 .profile__inner .right .profile__more a:after {
-    background-color: var(--black600);
-    transform: scaleX(0);
-    transition: all 0.3s;
+.profile__more a:hover::after {
+    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
+    transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
+    transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */
 }
-
-#section5 .profile__inner .right .profile__more a:hover {
-    color: var(--black100);
-}
-
-#section5 .profile__inner .right .profile__more a:hover::after {
-    transform: scaleX(1);
-}
-
-#section5 .profile__inner .right .profile__more a svg {
-    position: absolute;
-    right: 2%;
-    top: 24%;
-
-    animation: arrowAnimation2 1.4s infinite;
-}
-
-#section5 .profile__inner .right .profile__more a svg polygon {
-    fill: var(--black600);
-}
-
-#section5 .profile__inner .right .profile__more a:hover polygon {
-    fill: var(--black100);
-}
+/*  */

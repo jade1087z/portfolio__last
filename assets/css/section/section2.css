@@ -35,12 +35,27 @@
 #section2 .imgWrap > div:nth-child(3) {
     background-image: url(https://images.unsplash.com/photo-1683009427619-a1a11b799e05?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
-.text-title {
+
+.relativeBox{
     position: relative;
+    background-color: #ccc;
+    width: 100px;
+    height: 100px;
+}
+.text__flex {
+    display: flex;  
+    padding-top: 3%;
+}
+.text__flex .left {
+    width: 10%;
+    position: relative;
+}
+.text__flex .right {
+    width: 90%;
 }
 
 .text-title p {
-    padding: 3% 5% 0 10%;
+    padding: 0% 5% 0 10%;
     font-family: "GmarketSans";
     font-weight: 900;
     font-size: 4vw;
@@ -70,7 +85,7 @@
     font-weight: normal;
 }
 
-.text-title .desc2 i {
+.text-title .right .desc2 i {
     font-style: normal;
     text-decoration: underline;
     text-underline-position: under;
@@ -78,7 +93,7 @@
     margin-bottom: 20px;
 }
 
-.text-title .desc2 a {
+.text-title .right .desc2 a {
     position: relative;
     pointer-events: auto;
     letter-spacing: 1px;
@@ -89,7 +104,7 @@
     width: 18rem;
     text-align: left;
 }
-.text-title .desc2 a svg {
+.text-title .right .desc2 a svg {
     position: absolute;
     right: 0%;
     top: 30%;
