@@ -20,9 +20,6 @@
 .sec3__text .img {
     width: 12vw;
     height: 7.4vw;
-    /* background-image: url(https:////source.unsplash.com/500x500/?water);
-    background-size: cover;
-    background-position: center; */
     position: absolute;
     left: 0.6vw;
     top: 0.2vw;
@@ -33,16 +30,6 @@
     height: 7.4vw;
 }
 
-/* .sec3__intro {
-    display: flex;
-} */
-/* .left {
-    width: 50%;
-}
-
-.right {
-    width: 50%;
-} */
 
 
 .right .desc2 a,
