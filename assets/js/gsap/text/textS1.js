@@ -1,4 +1,4 @@
-const targets1 = gsap.utils.toArray(".split");
+const targets1 = gsap.utils.toArray(".split1");
 
 targets1.forEach((target) => {
     let SplitClient = new SplitType(target, { type: "lines, words, chars" });

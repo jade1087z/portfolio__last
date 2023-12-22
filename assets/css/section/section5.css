@@ -4,6 +4,22 @@
 #section5 .profile__inner {
     padding: 0 50px;
 }
+#section5 .profile__inner .profile__wrap {
+    position: relative;
+}
+#section5 .profile__inner .img {
+    position: absolute;
+    left: 0.6vw;
+    top: 0.2vw;
+}
+
+#section5 .profile__inner .img img {
+    border-radius: 10px;
+    width: 12vw;
+    height: 7.4vw;
+}
+
+
 #section5 .profile__inner .profile__title {
 }
 #section5 .profile__inner .profile__title h4 {
@@ -55,6 +71,7 @@
     font-size: 1.1vw;
     font-family: var(--font-Roboto);
     font-weight: bold;
+    line-height: 1.3;
 }
 .profile .profile__text {
     width: 86%;
@@ -69,14 +86,14 @@
 .profile .profile__text .profile__subDe {
     color: var(--desc-color);
     font-family: var(--font-iro);
-    font-size: 0.9vw;
+    font-size: 0.8vw;
     width: 80%;
     line-height: 1.9;
 }
 
 .profile__right .profile__more {
     width: 100%;
-    padding: 0% 15% 0% 14%;
+    padding: 0% 15% 0% 15%;
 }
 
 
@@ -84,18 +101,13 @@
 
 }
 
-
-
-
-
-
 /* a link */
 .profile__right .profile__more a {
     display: flex;
     position: relative;
     pointer-events: auto;
-    
     width: 20vw;
+   
 }
 .profile__right .profile__more a p {
     line-height: 1.6;
@@ -105,6 +117,7 @@
     letter-spacing: 1px;
     font-family: var(--font-Roboto);
     font-weight: 400;
+    color: var(--desc-color);
 }
 
 .profile__right .profile__more a svg {
@@ -113,16 +126,17 @@
     bottom: 4%;
     width: 1.5vw;
     height: 1vw;
+    fill: var(--desc-color);
 }
 .profile__right .profile__more a svg path {
-  
+  fill: var(--desc-color);
 }
 
 .profile__right .profile__more a::before,
 .profile__right .profile__more a::after {
     content: "";
     position: absolute;
-    background-color: #000;
+    background-color: var(--desc-color);
     height: 1px;
     width: 100%;
     left: 0;
@@ -132,7 +146,9 @@
     transform-origin: left; /* 변환의 기준점을 왼쪽으로 설정 */
     transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86); /* 기본 상태에 transition 추가 */
 }
-
+.profile__right .profile__more a:hover p,
+.profile__right .profile__more a:hover svg path
+{ color: black; fill: black;}
 .profile__right .profile__more a:hover::before {
     transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
     transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */

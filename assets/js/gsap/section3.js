@@ -1,171 +1,96 @@
-// const timelineBTT7 = gsap.timeline({ paused: true });
-// const timelineBTT8 = gsap.timeline({ paused: true });
+    const timelineBTT7_9 = gsap.timeline({ paused: true, onComplete: () => timelineBTT8.play() });
+    const timelineBTT8 = gsap.timeline({ paused: true });
+    
+    const tl2 = gsap.timeline({ paused: true });
+    // const targets3 = gsap.utils.toArray(".split3");
+    //     targets3.forEach((target) => {
+    //     let SplitClient = new SplitType(target, { type: "lines, words, chars" });
+    //     let lines = SplitClient.lines;
+    //     let words = SplitClient.words;
+    //     let chars = SplitClient.chars;
+    // });
+    gsap.set(".sec3__intro .first ", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".split3-1", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".split3-2", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".split3-3", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".sec3__intro .last ", { opacity: 0, y: 10, x: 0 });
 
+    const hide3 = (item) => {
+        gsap.set(item, { autoAlpha: 0 });
+    };
 
-// const hide3 = (item) => {
-//     gsap.set(item, { autoAlpha: 0 });
-// };
+    const animateBTT7_9 = (item, y) => {
+        const timeline = gsap.timeline();
 
-// const animateBTT7_9 = (item, y) => {
-//     const timeline = gsap.timeline({ paused: true,
-//         onComplete: () => {
-//             if(item.nextElementSibling && item.nextElementSibling.classList.contains('BTT8')) {
-//                 animateBTT8(item.nextElementSibling).play();
-//             }
-//         } });
-
-//     timeline.fromTo(
-//         item,
-//         {
-//             autoAlpha: 1,
-//             y: y,
-//         },
-//         {
-//             autoAlpha: 1,
-//             y: 0,
-//             duration: 1,
-//             overwrite: "auto",
-//             ease: "power2.inOut",
-//         }
-//     );
-
-//     if (item.classList.contains("BTT9")) {
-//         timeline.fromTo(
-//             item,
-//             {
-//                 x: 0,
-//             },
-//             {
-//                 x: 13 + "vw",
-//                 duration: 1,
-//                 overwrite: "auto",
-//                 ease: "power2.inOut",
-//             }
-//         );
-//     }
-
-//     return timeline;
-// };
-
-// const animateBTT8 = (item) => {
-//     if (!item.animation) {
-//         item.animation = timelineBTT8.fromTo(
-//             item,
-//             { x: -250, autoAlpha: 1 },
-//             { x: 0, autoAlpha: 1, duration: 1, overwrite: "auto", ease: "power2.inOut" }
-//         );
-//     }
-
-//     return item.animation;
-// };
-
-// window.addEventListener("resize", _.throttle(function () {
-//     gsap.utils.toArray(".BTT8").forEach((item) => {
-//         animateBTT8(item);
-//     });
-//     gsap.utils.toArray(".BTT9").forEach((item) => {
-//         animateBTT8(item);
-//     });
-// }, 500));
-
-// gsap.utils.toArray(".reveal3").forEach((item) => {
-//     hide3(item);
-//     let animation;
-//     if (item.classList.contains("BTT7") || item.classList.contains("BTT9")) {
-//         animation = animateBTT7_9(item, 200);
-//     } else if (item.classList.contains("BTT8")) {
-//         animation = animateBTT8(item);
-//     }
-
-//     ScrollTrigger.create({
-//         trigger: item,
-//         start: "top bottom",
-//         end: "bottom top",
-//         markers: true,
-//         onEnter: () => {
-//             animation.play();
-//         },
-//     });
-// });
-
-const timelineBTT7 = gsap.timeline({ paused: true });
-const timelineBTT8 = gsap.timeline({ paused: true });
-
-const hide3 = (item) => {
-    gsap.set(item, { autoAlpha: 0 });
-};
-
-const animateBTT7_9 = (item, y) => {
-    const timeline = gsap.timeline();
-
-    timeline.fromTo(
-        item,
-        {
-            autoAlpha: 1,
-            y: y,
-        },
-        {
-            autoAlpha: 1,
-            y: 0,
-            duration: 1,
-            overwrite: "auto",
-            ease: "power2.inOut",
-            onComplete: () => {
-                if (!timelineBTT8.isActive()) {
-                    timelineBTT8.play();
-                }
-            },
-        }
-    );
-
-    if (item.classList.contains("BTT9")) {
         timeline.fromTo(
             item,
             {
-                x: 0,
+                autoAlpha: 1,
+                y: y,
             },
             {
-                x: 13 + "vw",
-                duration: 1,
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.8,
                 overwrite: "auto",
                 ease: "power2.inOut",
             }
         );
-    }
 
-    return timeline;
-};
+        if (item.classList.contains("BTT9")) {
+            timeline.fromTo(
+                item,
+                {
+                    x: 0,
+                },
+                {
+                    x: 13 + "vw",
+                    duration: 1.1,
+                    overwrite: "auto",
+                    ease: "power2.inOut",
+                }
+            );
+        }
 
-const animateBTT8 = (item) => {
-    if (!item.animation) {
-        item.animation = timelineBTT8.fromTo(
+        return timeline;
+    };
+
+    const animateBTT8 = (item) => {
+        return timelineBTT8.fromTo(
             item,
             { x: -250, autoAlpha: 1 },
-            { x: 0, autoAlpha: 1, duration: 1.5, overwrite: "auto", ease: "power2.inOut" }
+            { x: 0, autoAlpha: 1, duration: 1, overwrite: "auto", ease: "power2.inOut" }
         );
-    }
+    };
 
-    return item.animation;
-};
+    gsap.utils.toArray(".reveal3").forEach((item) => {
+        hide3(item);
 
-gsap.utils.toArray(".reveal3").forEach((item) => {
-    hide3(item);
-    let animation;
-    if (item.classList.contains("BTT7") || item.classList.contains("BTT9")) {
-        animation = animateBTT7_9(item, 200);
-        timelineBTT7.add(animation);
-    } else if (item.classList.contains("BTT8")) {
-        animation = animateBTT8(item);
-        timelineBTT8.add(animation);
-    }
+        if (item.classList.contains("BTT7") || item.classList.contains("BTT9")) {
+            // BTT7, BTT9 애니메이션을 timelineBTT7_9에 추가
+            timelineBTT7_9.add(animateBTT7_9(item, 200), "start");
+        } else if (item.classList.contains("BTT8")) {
+            // BTT8 애니메이션을 timelineBTT8에 추가
+            animateBTT8(item);
+        }
 
-    ScrollTrigger.create({
-        trigger: item,
-        start: "top bottom",
-        end: "bottom top",
-        markers: true,
-        onEnter: () => {
-            timelineBTT7.play();
-        },
+        ScrollTrigger.create({
+            trigger: item,
+            start: "top +=500",
+            end: "bottom top",
+            markers: true,
+            onEnter: () => {
+                if (!timelineBTT7_9.isActive()) {
+                    timelineBTT7_9.play().then(()=>{
+                        tl2.to(".sec3__intro .first ", {opacity: 1 ,y: 0, x: 0, stagger: 0, duration: 0.8, ease: "power2.inOut",},"-=0.5");
+                        tl2.to(".split3-1",{opacity: 1 ,y: 0, x: 0, stagger: 0, duration: 0.8, ease: "power2.inOut", onComplete: console.log("ok")},"-=0.5");
+                        tl2.to(".split3-2",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 0.8, ease: "power2.inOut",},"-=0.5");    
+                        tl2.to(".split3-3",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 0.8, ease: "power2.inOut",},"-=0.5");    
+                        tl2.to(".sec3__intro .last ", {opacity: 1 ,y: 0, x: 0, stagger: 0, duration: 0.8, ease: "power2.inOut",},"-=0.5");
+                        tl2.play();
+                    })
+                }
+
+            },
+        });
     });
-});

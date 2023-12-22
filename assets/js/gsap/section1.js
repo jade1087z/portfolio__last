@@ -53,7 +53,7 @@ const animateBTT4 = (item) => {
         {
             x: 0,
             autoAlpha: 1,
-            duration: 2.2,
+            duration: 1,
             overwrite: "auto",
             ease: "power2.inOut",
         }
