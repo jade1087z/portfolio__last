@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 </head>
 
 <body>
@@ -60,10 +61,17 @@
     <!-- section 1 -->
 
     <div id="section2">
-        <div class="imgWrap">
-            <div class="slider s1"></div>
-            <div class="slider s2"></div>
-            <div class="slider s3"></div>
+        <div class="loop__slide__container">
+            <div class="loop__slide__group">
+                <img class="loop__slide" src="https://images.unsplash.com/photo-1635438909544-3f1e87c206eb" height="500" width="800" alt="">
+                <img class="loop__slide" src="https://images.unsplash.com/photo-1702221422565-60f734cd90b1" height="500" width="800" alt="">
+                <img class="loop__slide" src="https://images.unsplash.com/photo-1683009427619-a1a11b799e05" height="500" width="800" alt="">
+            </div>
+            <div class="loop__slide__group">
+                <img class="loop__slide" src="https://images.unsplash.com/photo-1635438909544-3f1e87c206eb" height="500" width="800" alt="">
+                <img class="loop__slide" src="https://images.unsplash.com/photo-1702221422565-60f734cd90b1" height="500" width="800" alt="">
+                <img class="loop__slide" src="https://images.unsplash.com/photo-1683009427619-a1a11b799e05" height="500" width="800" alt="">
+            </div>
         </div>
         <div class="text-title">
             <div class="text__flex">
@@ -147,21 +155,20 @@
 
     <div id="section4">
         <div class="project__wrap">
-
             <div class="project p1 work">
                 <div class="project__flex">
                     <div class="left">
                         <div class="NUMHIDDEN">
-                            <div class="reveal BTT2 num">1.</div>
+                            <div class="reveal1 BTT3 num">1.</div>
                         </div>
                     </div>
                     <div class="middle">(Digital Stage)</div>
                     <div class="right">
                         <div class="HIDDEN title">
-                            <h4 class="reveal BTT2">Recreating the</h4>
+                            <h4 class="reveal1 BTT2">Recreating the</h4>
                         </div>
                         <div class="HIDDEN title">
-                            <h4 class="reveal BTT2">React YouTube Clone.</h4>
+                            <h4 class="reveal1 BTT2">React YouTube Clone.</h4>
                         </div>
                         <div class="item__wrap">
                             <div class="HIDDEN img">
@@ -189,8 +196,6 @@
                                             <path d="M0 8.25H15" stroke="black" stroke-width="2" />
                                             <path d="M8 0V16" stroke="black" stroke-width="2" />
                                         </svg>
-
-
                                     </div>
                                     <div class="hidden__desc pl10">
                                         <span>asd</span>
@@ -199,23 +204,23 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+
             <div class="project p2 work">
                 <div class="project__flex">
                     <div class="left">
                         <div class="NUMHIDDEN">
-                            <div class="reveal BTT2 num">2.</div>
+                            <div class="reveal1 BTT3 num">2.</div>
                         </div>
                     </div>
                     <div class="middle">(Digital Stage)</div>
                     <div class="right">
                         <div class="HIDDEN title">
-                            <h4 class="reveal BTT2">Recreating the</h4>
+                            <h4 class="reveal1 BTT2">Recreating the</h4>
                         </div>
                         <div class="HIDDEN title">
-                            <h4 class="reveal BTT2">React YouTube Clone.</h4>
+                            <h4 class="reveal1 BTT2">React YouTube Clone.</h4>
                         </div>
                         <div class="item__wrap">
                             <div class="HIDDEN img">
@@ -243,8 +248,6 @@
                                             <path d="M0 8.25H15" stroke="black" stroke-width="2" />
                                             <path d="M8 0V16" stroke="black" stroke-width="2" />
                                         </svg>
-
-
                                     </div>
                                     <div class="hidden__desc pl10">
                                         <span>asd</span>
@@ -253,23 +256,23 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+
             <div class="project p3 work">
                 <div class="project__flex">
                     <div class="left">
                         <div class="NUMHIDDEN">
-                            <div class="reveal BTT2 num">3.</div>
+                            <div class="reveal1 BTT3 num">3.</div>
                         </div>
                     </div>
                     <div class="middle">(Digital Stage)</div>
                     <div class="right">
                         <div class="HIDDEN title">
-                            <h4 class="reveal BTT2">Recreating the</h4>
+                            <h4 class="reveal1 BTT2">Recreating the</h4>
                         </div>
                         <div class="HIDDEN title">
-                            <h4 class="reveal BTT2">React YouTube Clone.</h4>
+                            <h4 class="reveal1 BTT2">React YouTube Clone.</h4>
                         </div>
                         <div class="item__wrap">
                             <div class="HIDDEN img">
@@ -297,8 +300,6 @@
                                             <path d="M0 8.25H15" stroke="black" stroke-width="2" />
                                             <path d="M8 0V16" stroke="black" stroke-width="2" />
                                         </svg>
-
-
                                     </div>
                                     <div class="hidden__desc pl10">
                                         <span>asd</span>
@@ -307,12 +308,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
-
         </div>
     </div>
 
@@ -387,16 +384,67 @@
     
     <div id="section6">
         <div class="skill__inner">
-            <div class="skill__title HIDDEN pb100">
-                <h4 class="BTT">MY skill</h4>
+            <div class="skill__flex">
+                <div class="skill__left">
+                    <div class="reveal2 BTT6 svg">
+                        <p class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <polygon
+                                    points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                <div class="skill__right">
+                    <div class="HIDDEN">
+                        <p class="desc1 reveal2 BTT5">Utilized Skills and Their</p>
+                    </div>
+                    <div class="HIDDEN">
+                        <p class="desc1 reveal2 BTT5" id="desc1-1">Rationale </p>
+                    </div>
+                </div>
             </div>
-            <div class="skill__title HIDDEN pb100">
-                <h4 class="BTT">MY skill</h4>
+            <div class="skill__flex__box">
+                <div class="my__skill">
+                    <p class="sub__tit">google 960 639</p>
+                    <p class="sub__desc">"dumy text dumy textdumy textdumy textdumy text" "dumy text dumy textdumy
+                        textdumy textdumy text" "dumy text dumy textdumy textdumy textdumy text"dumy text dumy textdumy
+                        textdumy textdumy text"</p>
+                </div>
+                <div class="my__skill">
+                    <p class="sub__tit">google 960 639</p>
+                    <p class="sub__desc">"dumy text dumy textdumy textdumy textdumy text"</p>
+                </div>
+                <div class="my__skill">
+                    <p class="sub__tit">google 960 639</p>
+                    <p class="sub__desc">"dumy text dumy textdumy textdumy textdumy text"</p>
+                </div>
             </div>
-            <div class="skill__title HIDDEN pb100">
-                <h4 class="BTT">MY skill</h4>
+            <div class="skill__scrollBar">
+                <div class="scroll__num whiteSpaceNo">
+                    <span class="now">01 - </span>
+                    <span class="all">05</span>
+                </div>
+                <div class="bar">
+                </div>
+                <div class="rem">
+                    <div class="prev">
+                        <svg width="24" height="24" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.22441 17.3145C0.25263 18.2953 0.259964 19.8782 1.24079 20.85L17.2242 36.686C18.2051 37.6578 19.788 37.6505 20.7597 36.6696C21.7315 35.6888 21.7242 34.1059 20.7434 33.1341L6.53584 19.0577L20.6123 4.85016C21.5841 3.86934 21.5767 2.28644 20.5959 1.31467C19.6151 0.34289 18.0322 0.350225 17.0604 1.33105L1.22441 17.3145ZM34.9884 16.4258L2.98876 16.5741L3.01193 21.574L35.0116 21.4258L34.9884 16.4258Z"
+                                fill="#5F6168" />
+                        </svg>
+
+                    </div>
+                    <div class="next">
+                        <svg width="24" height="24" viewBox="0 0 35 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M33.7678 20.7678C34.7441 19.7915 34.7441 18.2085 33.7678 17.2322L17.8579 1.32233C16.8816 0.34602 15.2986 0.34602 14.3223 1.32233C13.346 2.29864 13.346 3.88155 14.3223 4.85786L28.4645 19L14.3223 33.1421C13.346 34.1184 13.346 35.7014 14.3223 36.6777C15.2986 37.654 16.8816 37.654 17.8579 36.6777L33.7678 20.7678ZM0 21.5H32V16.5H0V21.5Z"
+                                fill="#5F6168" />
+                        </svg>
+                    </div>
+                </div>
             </div>
-           
         </div>
     </div>
 
@@ -407,33 +455,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- gsap -->
-
+    
+    
+    <script src="assets/js/util/slide.js"></script>
     <script src="assets/js/gsap/section1.js"></script>
     <script type="module" src="assets/js/gsap/section2.js"></script>
     <script type="module" src="assets/js/gsap/section3.js"></script>
     <script type="module" src="assets/js/gsap/section5.js"></script>
-
-    <!-- split gsap -->
     <script src="assets/js/gsap/text/textS1.js"></script>
-    
-    <!-- <script src="assets/js/gsap/text/textS2.js"></script> -->
-    <!-- <script src="assets/js/gsap/text/textS3.js"></script> -->
-
     <script src="assets/js/util/header__hover.js"></script>
     <script src="assets/js/util/header__today.js"></script>
     <script src="assets/js/util/work__sticky.js"></script>
     <script src="assets/js/util/work__click.js"></script>
 
+    <!-- gsap -->
+    
+
+    <!-- split gsap -->
+    
+    <!-- <script src="assets/js/gsap/text/textS2.js"></script> -->
+    <!-- <script src="assets/js/gsap/text/textS3.js"></script> -->
     <!-- <script src="assets/js/util/smooth.js"></script> -->
     <!-- <script src="assets/js/gsap/work.js"></script> -->
     <!-- <script src="assets/js/util/arrow.js"></script> -->
-
+   
 </body>
 
 </html>

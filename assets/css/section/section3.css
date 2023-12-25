@@ -1,6 +1,7 @@
 @import "../setting/animation.css";
 #section3 {
-    padding: 350px 50px 50px 50px;
+    padding: 150px 0px 50px 50px !important;
+    border-top: 1px solid var(--line-color);
 }
 #section3 .work__inner .work__wrap {
 }
@@ -32,9 +33,9 @@
 
 
 
-#section3 .right .desc2 a,
+#section3 > .right .desc2 a,
 .right .desc2 {
-    /* padding: 3% 5% 0 10%; */
+    padding: 3% 4.3% 0 10%;
     text-align: right;
     font-family: "IropkeBatang";
     line-height: 1.6;

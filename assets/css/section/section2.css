@@ -1,11 +1,27 @@
 @import "../setting/animation.css";
 #section2 {
-    padding: 0 0 100px;
+    padding: 0 0 200px;
     position: relative;
     overflow: hidden;
 }
-
-#section2 .imgWrap {
+.loop__slide__container {
+    display: flex;
+    width: max-content;
+    overflow: hidden;
+    padding: 100px 0;
+}
+.loop__slide__group {
+    display: flex;
+}
+.loop__slide {
+   width: 41.7vw;
+   height: 26vw;
+   margin-right: 30px;
+}
+.loop__slide__group > img {
+    border-radius: 5px;
+}
+/* #section2 .imgWrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -34,7 +50,7 @@
 
 #section2 .imgWrap > div:nth-child(3) {
     background-image: url(https://images.unsplash.com/photo-1683009427619-a1a11b799e05?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-}
+} */
 
 .relativeBox{
     position: relative;

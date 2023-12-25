@@ -83,7 +83,7 @@ gsap.utils.toArray(".reveal5").forEach((item) => {
 
     ScrollTrigger.create({
         trigger: item,
-        start: "top bottom",
+        start: "top +=700",
         end: "bottom top",
         markers: true,
         onEnter: () => {

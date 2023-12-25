@@ -69,12 +69,13 @@ gsap.utils.toArray(".reveal1").forEach((item) => {
     let animation;
     if (
         item.classList.contains("BTT1") ||
-        item.classList.contains("BTT2") ||
-        item.classList.contains("BTT3")
+        item.classList.contains("BTT2") 
     ) {
         animation = animateBTT1_2_3(item, 200);
     } else if (item.classList.contains("BTT4")) {
         animation = animateBTT4(item);
+    } else if(item.classList.contains("BTT3")) {
+        animation = animateBTT1_2_3(item, 400);
     }
 
     ScrollTrigger.create({

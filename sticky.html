@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<style>
+    #section6 .skill__inner {
+        padding-left: 50px;
+    }
+
+    .skill__flex {
+        width: 100%;
+        display: flex;
+        padding-bottom: 150px;
+    }
+
+    .skill__flex .skill__left {
+        width: 10%;
+        position: relative;
+    }
+
+    .skill__flex .skill__right {
+        width: 90%;
+    }
+
+    .skill__flex>.skill__right p {
+        font-family: "GmarketSans";
+        font-weight: 900;
+        font-size: 4vw;
+        line-height: 1.2;
+        text-align: right;
+        padding: 0 5% 0 10%;
+    }
+
+    #desc1-1 {
+        padding-top: 0;
+    }
+
+    .skill__left .svg svg {
+        animation: arrowAnimation 1.4s infinite;
+    }
+
+    .skill__left .svg svg {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+
+    .skill__inner .skill__flex__box .my__skill {
+        width: 52vw;
+        height: 34vw;
+        border: 2px solid var(--line-color);
+        margin-right: 20px;
+        border-radius: 16px;
+    }
+
+    .skill__inner .skill__flex__box .my__skill p {
+        padding: 3% 3% 1% 5%;
+    }
+
+    .skill__inner .skill__flex__box .my__skill .sub__tit {
+        font-size: 2.5vw;
+    }
+
+    .skill__inner .skill__flex__box .my__skill .sub__desc {
+        font-size: 1.8vw;
+    }
+
+    .skill__inner .skill__flex__box {
+        display: flex;
+        width: 500%;
+        overflow: hidden;
+    }
+
+    .skill__flex__box {
+        display: flex;
+    }
+
+    .skill__inner .skill__scrollBar {
+        display: flex;
+        padding-top: 30px;
+        padding-right: 20px;
+    }
+
+    .skill__inner .skill__scrollBar .scroll__num {
+        width: 10%;
+        padding-right: 10px;
+    }
+
+    .skill__inner .skill__scrollBar .scroll__num span {
+        font-size: 1.3rem;
+        line-height: 53px;
+    }
+
+    .skill__inner .skill__scrollBar .bar {
+        width: 190%;
+        height: 2px;
+        background-color: black;
+        margin-top: 23px;
+
+    }
+
+    .skill__inner .skill__scrollBar .rem {
+        width: 19%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .skill__inner .skill__scrollBar .rem div {
+        border-radius: 50%;
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    .skill__inner .skill__scrollBar .rem .prev {
+        margin-right: 1vw;
+    }
+
+    .skill__inner .skill__scrollBar .rem div:hover {
+        background-color: black;
+        
+    }
+    .skill__inner .skill__scrollBar .rem div svg {
+        
+    }
+    .skill__inner .skill__scrollBar .rem div:hover svg path {
+        fill: white;
+    }
+</style>
+
+<body>
+    <div id="section6">
+        <div class="skill__inner">
+            <div class="skill__flex">
+                <div class="skill__left">
+                    <div class="reveal2 BTT6 svg">
+                        <p class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <polygon
+                                    points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                <div class="skill__right">
+                    <div class="HIDDEN">
+                        <p class="desc1 reveal2 BTT5">Utilized Skills and Their</p>
+                    </div>
+                    <div class="HIDDEN">
+                        <p class="desc1 reveal2 BTT5" id="desc1-1">Rationale </p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill__flex__box">
+                <div class="my__skill">
+                    <p class="sub__tit">google 960 639</p>
+                    <p class="sub__desc">"dumy text dumy textdumy textdumy textdumy text" "dumy text dumy textdumy
+                        textdumy textdumy text" "dumy text dumy textdumy textdumy textdumy text"dumy text dumy textdumy
+                        textdumy textdumy text"</p>
+                </div>
+                <div class="my__skill">
+                    <p class="sub__tit">google 960 639</p>
+                    <p class="sub__desc">"dumy text dumy textdumy textdumy textdumy text"</p>
+                </div>
+                <div class="my__skill">
+                    <p class="sub__tit">google 960 639</p>
+                    <p class="sub__desc">"dumy text dumy textdumy textdumy textdumy text"</p>
+                </div>
+            </div>
+            <div class="skill__scrollBar">
+                <div class="scroll__num whiteSpaceNo">
+                    <span class="now">01 - </span>
+                    <span class="all">05</span>
+                </div>
+                <div class="bar">
+                </div>
+                <div class="rem">
+                    <div class="prev">
+                        <svg width="24" height="24" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.22441 17.3145C0.25263 18.2953 0.259964 19.8782 1.24079 20.85L17.2242 36.686C18.2051 37.6578 19.788 37.6505 20.7597 36.6696C21.7315 35.6888 21.7242 34.1059 20.7434 33.1341L6.53584 19.0577L20.6123 4.85016C21.5841 3.86934 21.5767 2.28644 20.5959 1.31467C19.6151 0.34289 18.0322 0.350225 17.0604 1.33105L1.22441 17.3145ZM34.9884 16.4258L2.98876 16.5741L3.01193 21.574L35.0116 21.4258L34.9884 16.4258Z"
+                                fill="#5F6168" />
+                        </svg>
+
+                    </div>
+                    <div class="next">
+                        <svg width="24" height="24" viewBox="0 0 35 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M33.7678 20.7678C34.7441 19.7915 34.7441 18.2085 33.7678 17.2322L17.8579 1.32233C16.8816 0.34602 15.2986 0.34602 14.3223 1.32233C13.346 2.29864 13.346 3.88155 14.3223 4.85786L28.4645 19L14.3223 33.1421C13.346 34.1184 13.346 35.7014 14.3223 36.6777C15.2986 37.654 16.8816 37.654 17.8579 36.6777L33.7678 20.7678ZM0 21.5H32V16.5H0V21.5Z"
+                                fill="#5F6168" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
