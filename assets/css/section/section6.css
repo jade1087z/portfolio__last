@@ -44,10 +44,10 @@
 }
 
 .skill__inner .skill__flex__box .my__skill {
-    width: 52vw;
-    height: 34vw;
+    width: 45vw;
+    height: 30vw;
     border: 2px solid var(--line-color);
-    margin-right: 20px;
+    margin-right: 30px;
     border-radius: 16px;
 }
 
