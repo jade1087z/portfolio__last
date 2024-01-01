@@ -11,11 +11,11 @@
     });
 
     gsap.set(".text__flex .right .first",{ opacity: 0, y: 100, x: 0 });
-    gsap.set(".text__flex .right .split2 .line:nth-child(1) .char", { opacity: 0, y: 10, x: 0 });
-    gsap.set(".text__flex .right .split2 .line:nth-child(2) .char", { opacity: 0, y: 10, x: 0 });
-    gsap.set(".text__flex .right .split2 .line:nth-child(3) .char", { opacity: 0, y: 10, x: 0 });
-    gsap.set(".text__flex .right .split2 .line:nth-child(4) .char", { opacity: 0, y: 10, x: 0 });
-    gsap.set(".text__flex .right .split2 .line:nth-child(5) .char", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".text__flex .right .sp2", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".text__flex .right .sp3", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".text__flex .right .sp4", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".text__flex .right .sp5", { opacity: 0, y: 10, x: 0 });
+    gsap.set(".text__flex .right .sp6", { opacity: 0, y: 10, x: 0 });
     gsap.set(".text__flex .right .last",{ opacity: 0, y: 10, x: 0 });
 
     const hide1 = (item) => {
@@ -81,11 +81,11 @@
                 animation.play().then(() => {
                     console.log('Animation play ended for item:', item);
                     tl.to(".text__flex .right .first", {opacity: 1 ,y: -20, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");
-                    tl.to(".text__flex .right .split2 .line:nth-child(1) .char",{opacity: 1 ,y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");
-                    tl.to(".text__flex .right .split2 .line:nth-child(2) .char",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");    
-                    tl.to(".text__flex .right .split2 .line:nth-child(3) .char",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");    
-                    tl.to(".text__flex .right .split2 .line:nth-child(4) .char",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");
-                    tl.to(".text__flex .right .split2 .line:nth-child(5) .char",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");
+                    tl.to(".text__flex .right .sp2",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");    
+                    tl.to(".text__flex .right .sp3",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");    
+                    tl.to(".text__flex .right .sp4",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");
+                    tl.to(".text__flex .right .sp5",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");
+                    tl.to(".text__flex .right .sp6",{opacity: 1, y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");
                     tl.to(".text__flex .right .last", {opacity: 1 ,y: 0, x: 0, stagger: 0, duration: 1, ease: "power2.inOut",},"-=0.5");
                     tl.play();
                 })

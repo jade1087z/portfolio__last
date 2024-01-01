@@ -1,22 +1,54 @@
-const slideWidth = 830; // Slide's width
-const slideDuration = 30; // Slide's duration
-const slideGap = 0; // Gap between slides
+const slideWidth = 830;
+const slideGap = 30;
+const slideDuration = 30;
 const slideContainer = document.querySelector('.loop__slide__container');
-const slideCount = slideContainer.querySelectorAll('.loop__slide').length / 2;
-const totalWidth = (slideWidth * slideCount) + slideGap; // Total width of the slides including the gap
-const speed = totalWidth / slideDuration; // Speed of the animation
+const slideCount = slideContainer.querySelectorAll('.loop__slide').length; 
+const totalWidth = (slideWidth * slideCount) + slideGap; 
+const speed = totalWidth / slideDuration; 
 
-const staggerValue = slideGap / speed; // Calculate the stagger value
+const staggerValue = slideGap / speed; 
 
-gsap.timeline({repeat: -1, stagger: staggerValue})
-.to(".loop__slide__group:first-child", {
-    x: `-=${slideCount * slideWidth}`,
-    ease: "none",
-    duration: slideCount * slideDuration
-}, 0)
-.to(".loop__slide__group:last-child", {
-    x: `-=${slideCount * slideWidth}`,
-    ease: "none",
-    duration: slideCount * slideDuration
-}, staggerValue)
-.set(".loop__slide__group", {x: 0});
+// Create a single timeline for all slides
+const infiniteSlide = gsap.timeline({repeat: -1, stagger: staggerValue, ease: "power1.inOut", smoothChildTiming: true, invalidateOnRefresh: true});
+
+const slides = slideContainer.querySelectorAll('.loop__slide'); 
+slides.forEach((slide, index) => { 
+  infiniteSlide
+  .to(slide, { 
+      x: `-=${slideWidth}`,
+      ease: "none",
+      duration: slideDuration
+  }, index * staggerValue) // stagger the start of each slide's animation
+  .set(slide, {x: 0}); 
+});
+
+let scrollingSpeed = 10; 
+let currentSpeed = 1; 
+
+// Use ScrollTrigger to adjust the animation speed
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.create({
+  trigger: slideContainer,
+  start: 'top top',
+  end: 'bottom bottom',
+  onEnter: () => { 
+    gsap.to(infiniteSlide, {
+      timeScale: scrollingSpeed,
+      duration: 1, 
+      ease: "power1.in",
+      onUpdate: function() {
+        currentSpeed = infiniteSlide.timeScale();
+      }
+    });
+  },
+  onLeave: () => { 
+    gsap.to(infiniteSlide, {
+      timeScale: 1,
+      duration: 1,
+      ease: "power1.out",
+      onUpdate: function() {
+        currentSpeed = infiniteSlide.timeScale();
+      }
+    });
+  }
+});

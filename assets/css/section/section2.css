@@ -14,52 +14,34 @@
     display: flex;
 }
 .loop__slide {
-   width: 41.7vw;
-   height: 26vw;
-   margin-right: 30px;
-}
-.loop__slide__group > img {
-    border-radius: 5px;
-}
-/* #section2 .imgWrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    width: 200%;
-    margin-left: -50%;
-    white-space: nowrap;
-}
-
-#section2 .imgWrap > div {
-    width: 800px;
-    height: 500px;
-    margin: 10px;
+    width: 41.7vw;
+    height: 26vw;
+    margin-right: 30px;
     background-size: cover;
     background-position: center center;
     border-radius: 10px;
 }
 
-#section2 .imgWrap > div:nth-child(1) {
+.loop__slide:nth-child(1) {
     background-image: url(https://images.unsplash.com/photo-1635438909544-3f1e87c206eb?q=80&w=4074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
-#section2 .imgWrap > div:nth-child(2) {
+.loop__slide:nth-child(2) {
     background-image: url(https://images.unsplash.com/photo-1702221422565-60f734cd90b1?q=80&w=4000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
-#section2 .imgWrap > div:nth-child(3) {
+.loop__slide:nth-child(3) {
     background-image: url(https://images.unsplash.com/photo-1683009427619-a1a11b799e05?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-} */
+}
 
-.relativeBox{
+.relativeBox {
     position: relative;
     background-color: #ccc;
     width: 100px;
     height: 100px;
 }
 .text__flex {
-    display: flex;  
+    display: flex;
     padding-top: 3%;
 }
 .text__flex .left {
@@ -94,10 +76,11 @@
     height: 4.5vw;
 }
 
-.text-title .desc2 a,
-.text-title .desc2 {
+.text-title .right .desc2 a,
+.text-title .right .desc2 {
     font-family: "IropkeBatang";
     line-height: 1.6;
+    /* font-size: 0.95vw; */
     font-size: 1.13rem;
     color: #202020;
     font-weight: normal;
@@ -119,6 +102,7 @@
     letter-spacing: 1px;
     font-family: "Roboto Condensed";
     font-weight: 400;
+    /* font-size: 0.75vw; */
     font-size: 0.9rem;
     display: inline-block;
     width: 18rem;
@@ -134,10 +118,10 @@
 .text-title .right .desc2 a svg path {
     fill: var(--desc-color);
 }
-.text-title .right .desc2 a:hover svg path, 
+.text-title .right .desc2 a:hover svg path,
 .text-title .right .desc2 a:hover {
     color: black;
-    fill: black
+    fill: black;
 }
 .text-title .desc2 a > div {
     position: absolute;
@@ -157,18 +141,87 @@
     left: 0;
     right: 0;
     top: 103%;
-    transform: scaleX(1); /* 초기 상태를 1로 설정 */
-    transform-origin: left; /* 변환의 기준점을 왼쪽으로 설정 */
-    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86); /* 기본 상태에 transition 추가 */
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .text-title .desc2 a:hover::before {
-    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
-    transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
+    transform: scaleX(0);
+    transform-origin: right;
     transition-delay: 0s;
 }
 .text-title .desc2 a:hover::after {
-    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
-    transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
-    transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition-delay: 0.1s;
+}
+
+.text-center {
+    /* display: inline-block;
+    text-align: start; */
+}
+
+@media (max-width: 1100px) {
+    .text-title .right .first {
+        padding-top: 7% !important;
+    }
+    .text-title .right .last {
+        margin-top: 30px !important;
+    }
+
+    .text-title .right .desc2 {
+        padding-left: 3%;
+    }
+}
+
+@media (max-width: 850px) {
+    .loop__slide__container {padding-top: 0;}
+    .text-title .left {
+        display: none;
+    }
+    .text-title .right {
+        width: 100%;
+    }
+    .text-title .right .HIDDEN {
+    }
+    .text-title .right .HIDDEN p {
+        font-size: 6.5vw;
+        padding-right: 5% !important;
+    }
+
+    .text-title .right .first {
+        padding-top: 200px !important;
+        margin-bottom: 0;
+    }
+
+    .text-title .right p {
+        text-align: start;
+        padding-left: 5% !important;
+        padding-right: 10% !important;
+    }
+
+    .text-title .right .desc2 {
+        font-size: 1rem;
+    }
+    .text-title .right .last {
+        margin-top: 15px !important;
+    }
+    .text-title .right .desc2 a {
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 500px) {
+    #section2 {padding-bottom: 50px;}
+    .text-title .right .first {
+        padding-top: 100px !important;
+    }
+    .text-title .right .desc2 a {
+        width: 15rem;
+    }
+    .text-title .right .desc2 a svg {
+        width: 3vw;
+        height: 3vw;
+        top: 10%;
+    }
 }

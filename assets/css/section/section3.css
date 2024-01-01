@@ -9,32 +9,31 @@
     position: relative;
 }
 .sec3__text {
-    font-family: "GmarketSans";
     text-align: left;
     font-size: 9vw;
     line-height: 105%;
-    letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 900;
     position: relative;
 }
-.sec3__text .img {
+.sec3__text .HIDDEN:first-child {
     width: 12vw;
     height: 7.4vw;
     position: absolute;
     left: 0.6vw;
     top: 0.2vw;
-}
-.sec3__text .img > div img {
     border-radius: 10px;
-    width: 12vw;
-    height: 7.4vw;
+}
+.sec3__text .HIDDEN:first-child .img {
+    background-image: url(https:////source.unsplash.com/500x500/?water);
+    background-size: cover;
+    background-position: center;
+    width: inherit;
+    height: inherit;
 }
 
-
-
-#section3 > .right .desc2 a,
-.right .desc2 {
+#section3 .sec3__intro .right .desc2 a,
+#section3 .sec3__intro .right .desc2 {
     padding: 3% 4.3% 0 10%;
     text-align: right;
     font-family: "IropkeBatang";
@@ -44,7 +43,7 @@
     font-weight: normal;
 }
 
-#section3 .right .desc2 a {
+#section3 .sec3__intro .right .desc2 a {
     position: relative;
     pointer-events: auto;
     letter-spacing: 2px;
@@ -61,6 +60,7 @@
     right: 0%;
     top: 30%;
 }
+
 #section3 .right .desc2 a svg {
     fill: var(--desc-color);
 }
@@ -69,11 +69,11 @@
 #section3 .right .desc2 a::after {
     content: "";
     position: absolute;
-    background-color: #000;
+    background-color: var(--desc-color);
     height: 1px;
     width: 100%;
     left: 0;
-    top: 120%;
+    top: 150%;
     transform: scaleX(1); /* 초기 상태를 1로 설정 */
     transform-origin: left; /* 변환의 기준점을 왼쪽으로 설정 */
     transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86); /* 기본 상태에 transition 추가 */
@@ -93,27 +93,34 @@
 }
 /*  */
 
-
-
-@media (max-width: 700px) {
-    
-    /* #section3 {
-        padding: 120px 2px 50px 20px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+@media (max-width: 850px) {
+    #section3 {
+        padding: 80px 2px 50px 13.5% !important;
     }
 
-    #section3 br {
-        display: none;
+    #section3 .sec3__intro .right {
+        width: 90%;
     }
-
-    .sec3__text {
+    #section3 .sec3__intro .right .desc2 a,
+    #section3 .sec3__intro .right .desc2 {
+        padding-left: 2%;
+        text-align: start;
     }
-
-    .sec3__intro p {
-        display: none;
-    } */
+    #section3 .sec3__intro .right .desc2 {
+        font-size: 1rem;
+    }
+    #section3 .sec3__intro .right .desc2 a {
+        font-size: 0.9rem;
+        padding-left: 0.7%;
+    }
+    #section3 .right .desc2 a::before,
+    #section3 .right .desc2 a::after {
+        left: 1%;
+    }
+}
+@media (max-width: 500px) {
+    #section3 {
+        padding-bottom: 0 !important;
+    }
+    #section3 .sec3__intro .right {display: none;}
 }

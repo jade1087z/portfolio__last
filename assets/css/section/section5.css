@@ -1,116 +1,119 @@
 #section5 {
-    padding: 150px 0;
+    padding: 150px 0px !important;
 }
-#section5 .profile__inner {
-    padding: 0 50px;
+
+#section5 .work__inner .work__wrap {
 }
-#section5 .profile__inner .profile__wrap {
+
+#section5 .profile__wrap {
+    position: relative;
+    padding: 0 50px 100px 50px;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.sec5__text {
+    text-align: left;
+    font-size: 9vw;
+    line-height: 105%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
     position: relative;
 }
-#section5 .profile__inner .img {
+
+.sec5__text .img {
+    width: 12vw;
+    height: 7.4vw;
+    
     position: absolute;
     left: 0.6vw;
     top: 0.2vw;
 }
 
-#section5 .profile__inner .img img {
+.sec5__text .img > div img {
     border-radius: 10px;
     width: 12vw;
     height: 7.4vw;
 }
 
-
-#section5 .profile__inner .profile__title {
-}
-#section5 .profile__inner .profile__title h4 {
-    font-size: 9vw;
-    line-height: 105%;
-    letter-spacing: 5px;
-    font-weight: 900;
-    /* position: relative; */
+.sticky__box {
 }
 
-#section5 .profile__inner .profile__flex {
+.profile__flex {
     display: flex;
+    padding: 100px 20px 0 20px;
+}
+.profile__flex .sticky__box {
 }
 
-.profile__flex .profile__left {
+.profile__flex .left {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 20px;
+    top: 100px; 
+}
+
+.profile__flex .left img {
+    width: 40vw;
+    height: 48vw;
+}
+
+.profile__flex .midle {
+    width: 30%;
+}
+
+.profile__flex .right {
+    /* overflow: auto; */
+}
+
+.profile__flex .right .right__wrap {
+    display: flex;
+    padding: 3% 0;
+}
+
+.profile__flex .right .right__wrap .num__wrap {
     width: 40%;
-    height: calc(100% - 2px);
-}
-.profile__flex .profile__img {
-    
-    width: calc(100% - 2px);
-    /* height: 50.23vw; */
-    /* width: 37.7vw; */
-    height: calc(100% - 2px);
-    border-radius: 10px;
-}
-.profile__flex .profile__img img {
-   
 }
 
-.profile__flex .profile__right {
-    width: 50%;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    /* padding: 3% 0; */
-}
-
-.profile__flex .profile__right .profile {
-    display: flex;
-    /* padding-bottom: 10%; */
-}
-.profile__flex .profile__right .profile p {
-    
-}
-.profile .profile__num {
-    width: 14%;
-    font-size: 1.1vw;
+.profile__flex .right .right__wrap .num__wrap .num {
+    font-size: 1vw;
     font-family: var(--font-Roboto);
     font-weight: bold;
     line-height: 1.3;
 }
-.profile .profile__text {
-    width: 86%;
-}
-.profile .profile__text .profile__subTit {
-    font-size: 1vw;
-    font-family: var(--font-Roboto);
-    font-weight: bold;
-    margin-bottom: 3%;
+
+.profile__flex .right .right__wrap .num__wrap .profile__text {
 }
 
-.profile .profile__text .profile__subDe {
+.profile__text p {
+    font-size: 1vw;
+    font-family: var(--font-iro);
+}
+
+.profile__text .profile__subTit {
+    padding-bottom: 16px;
+}
+
+.profile__text .profile__subDe {
+    width: 80%;
     color: var(--desc-color);
     font-family: var(--font-iro);
-    font-size: 0.8vw;
-    width: 80%;
     line-height: 1.9;
+    font-size: 0.9vw;
 }
 
-.profile__right .profile__more {
-    width: 100%;
-    padding: 0% 15% 0% 15%;
+.profile__flex .right .more {
+    padding-left: 130px !important;
+    padding-left: 14% !important;
 }
-
-
-@media (max-width: 1100px) {
-
-}
-
-/* a link */
-.profile__right .profile__more a {
+.right__wrap a {
     display: flex;
     position: relative;
     pointer-events: auto;
-    width: 20vw;
-   
+    width: 15vw;
 }
-.profile__right .profile__more a p {
-    line-height: 1.6;
+
+.right__wrap a p {
     font-size: 0.75vw;
     color: #202020;
     font-weight: normal;
@@ -120,7 +123,7 @@
     color: var(--desc-color);
 }
 
-.profile__right .profile__more a svg {
+.right .right__wrap.more a svg {
     position: absolute;
     right: 0.5%;
     bottom: 4%;
@@ -128,12 +131,13 @@
     height: 1vw;
     fill: var(--desc-color);
 }
-.profile__right .profile__more a svg path {
-  fill: var(--desc-color);
+
+.right .right__wrap.more a svg path {
+    fill: var(--desc-color);
 }
 
-.profile__right .profile__more a::before,
-.profile__right .profile__more a::after {
+.right .right__wrap.more a::before,
+.right .right__wrap.more a::after {
     content: "";
     position: absolute;
     background-color: var(--desc-color);
@@ -142,21 +146,88 @@
     left: 0;
     right: 0;
     top: 103%;
-    transform: scaleX(1); /* 초기 상태를 1로 설정 */
-    transform-origin: left; /* 변환의 기준점을 왼쪽으로 설정 */
-    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86); /* 기본 상태에 transition 추가 */
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-.profile__right .profile__more a:hover p,
-.profile__right .profile__more a:hover svg path
-{ color: black; fill: black;}
-.profile__right .profile__more a:hover::before {
-    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
-    transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
+
+.right .right__wrap.more a:hover p,
+.right .right__wrap.more a:hover svg path {
+    color: black;
+    fill: black;
+}
+
+.right .right__wrap.more a:hover::before {
+    transform: scaleX(0);
+    transform-origin: right;
     transition-delay: 0s;
 }
-.profile__right .profile__more a:hover::after {
-    transform: scaleX(0); /* hover 상태에서 scaleX를 0으로 설정 */
-    transform-origin: right; /* hover 상태에서 변환의 기준점을 오른쪽으로 설정 */
-    transition-delay: 0.1s; /* delay를 추가하여 순차적으로 보이게 함 */
+
+.right .right__wrap.more a:hover::after {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition-delay: 0.1s;
 }
-/*  */
+
+
+@media (max-width: 1280px) {
+    .profile__flex .midle {
+        width: 15%;
+    }
+
+    .profile__flex .right {
+
+    }
+    .profile__flex .right .right__wrap .num__wrap .num {
+        font-size: 1.5vw;
+    } 
+    .profile__flex .right .right__wrap .profile__text {}
+    .profile__flex .right .right__wrap .profile__text .profile__subTit {
+        font-size: 1.5vw;
+    }
+    .profile__flex .right .right__wrap .profile__text .profile__subDe {
+        font-size: 1.2vw;
+    }
+}
+
+@media (max-width: 850px) {
+    #section5 {
+        padding-top: 0 !important;
+        padding-bottom: 100px !important;
+    }
+    #section5 .profile__wrap {
+        padding: 100px 2px 100px 14.4% !important;
+    }
+    .profile__flex .midle {
+        width: 10%;
+    }
+    .profile__flex .right .right__wrap .num__wrap {
+        width: 30%;
+    }
+    .profile__flex .right .right__wrap .num__wrap .num {
+        font-size: 1.8vw;
+    } 
+    .profile__flex .right .right__wrap .profile__text .profile__subTit {
+        font-size: 1.8vw;
+    }
+    .profile__flex .right .right__wrap .profile__text .profile__subDe {
+        font-size: 1.4vw;
+        width: 100%;
+    }
+    .profile__flex .right .right__wrap.more {
+        padding-left: 9% !important;
+    }
+    .profile__flex .right .right__wrap.more a {
+        width: 20vw;
+    }
+    .profile__flex .right .right__wrap.more a p {
+        font-size: 1.1vw;
+    }
+    .profile__flex .right .right__wrap.more a svg {
+        width: 2vw;
+        height: 2vw;
+        bottom: -9%;
+    }
+}
+
+/* 600px 이하 해두기 */

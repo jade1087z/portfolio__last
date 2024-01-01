@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var elements = [
-        {el: $(".project.p1.work"), top: 0, height: 0},
-        {el: $(".project.p2.work"), top: 0, height: 0},
+        {el: $("#section4 .p1"), top: 0, height: 0},
+        {el: $("#section4 .p2"), top: 0, height: 0},
     ]; // 대상 요소들
 
     elements.forEach(function(element) {

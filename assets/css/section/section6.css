@@ -1,6 +1,7 @@
 #section6 {
-    padding: 100px 0 0 0;
+    padding: 100px 0 150px 0;
     border-top: 1px solid var(--line-color);
+    overflow: hidden;
 }
 #section6 .skill__inner {
     padding-left: 50px;
@@ -16,6 +17,14 @@
     width: 10%;
     position: relative;
 }
+.skill__left .svg svg {
+    animation: arrowAnimation 1.4s infinite;
+}
+
+.skill__left .svg svg {
+    width: 4.5vw;
+    height: 4.5vw;
+}
 
 .skill__flex .skill__right {
     width: 90%;
@@ -28,31 +37,24 @@
     line-height: 1.2;
     text-align: right;
     padding: 0 5% 0 10%;
+    text-transform: uppercase;
 }
 
 #desc1-1 {
     padding-top: 0;
 }
 
-.skill__left .svg svg {
-    animation: arrowAnimation 1.4s infinite;
-}
-
-.skill__left .svg svg {
-    width: 4.5vw;
-    height: 4.5vw;
-}
 
 .skill__inner .skill__flex__box .my__skill {
-    width: 45vw;
-    height: 30vw;
-    border: 2px solid var(--line-color);
+    width: 50vw;
+    height: 33vw;
+    border: 1px solid var(--line-color);
     margin-right: 30px;
-    border-radius: 16px;
+    border-radius: 5px;
 }
 
 .skill__inner .skill__flex__box .my__skill p {
-    padding: 3% 3% 1% 5%;
+    padding: 3% 6% 1% 6%;
 }
 
 .skill__inner .skill__flex__box .my__skill .sub__tit {
@@ -75,53 +77,173 @@
 
 .skill__inner .skill__scrollBar {
     display: flex;
-    padding-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 48px;
     padding-right: 20px;
 }
-
+  
 .skill__inner .skill__scrollBar .scroll__num {
-    width: 10%;
-    padding-right: 10px;
+    padding-right: 1vw;
 }
 
 .skill__inner .skill__scrollBar .scroll__num span {
-    font-size: 1.3rem;
-    line-height: 53px;
+    font-size: 1.28rem;
+    font-size: 1.05vw;
+
 }
 
 .skill__inner .skill__scrollBar .bar {
-    width: 190%;
+    max-width: 85%;
+    width: 75vw;
     height: 2px;
-    background-color: black;
-    margin-top: 23px;
+    background-color: var(--line-color);
+    position: relative;
+}
+.skill__inner .skill__scrollBar .bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    height: 2px;
+    width: 100%;
+    transform: scale(0);
 }
 
 .skill__inner .skill__scrollBar .rem {
-    width: 19%;
+    width: 10%;
     display: flex;
-    justify-content: flex-end;
+    padding-left: 2%;
 }
 
 .skill__inner .skill__scrollBar .rem div {
     border-radius: 50%;
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
+    border: 1px solid var(--line-color);
+    width: 4vw;
+    height: 3.4vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     transition: all 0.3s;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .skill__inner .skill__scrollBar .rem .prev {
-    margin-right: 1vw;
+    margin-right: 0.4vw;
+}
+.skill__inner .skill__scrollBar .rem div svg  {
+    width: 1.2vw;
+    height: 1.2vw;
 }
 
-.skill__inner .skill__scrollBar .rem div:hover {
+.skill__inner .skill__scrollBar .rem div:hover svg {z-index: 10;}
+.skill__inner .skill__scrollBar .rem div:hover svg path {fill: white !important;} 
+
+.skill__scrollBar .rem div::before,
+.skill__scrollBar .rem div::after {
+    content: "";
+    position: absolute;
     background-color: black;
+    border-radius: 50%;
 }
-.skill__inner .skill__scrollBar .rem div svg {
+.skill__scrollBar .rem div::before {
+    top: -1px;
+    bottom: -1px;
+    right: -1px;
+    left: -1px;
+    transform: scale(0);
+    transition: transform 0.65s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.skill__inner .skill__scrollBar .rem div:hover svg path {
-    fill: white;
+.skill__scrollBar .rem div::after {
+    opacity: 0.15;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    transform: scale(0);
+    transition: opacity 0.65s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.skill__scrollBar .rem div:hover::before,.skill__scrollBar .rem div:hover::after{
+    transform: scale(1);
+}
+
+
+@media (max-width: 1180px) {
+    .skill__inner .skill__scrollBar .scroll__num span {
+        font-size: 1.4vw !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .skill__inner {
+        padding: 50px 0 0 20px !important;
+    }
+    .skill__flex__box .my__skill .sub__desc {
+        font-size: 2vw !important;
+    }
+    .skill__flex {
+        padding: 0 5%;
+    }
+    .skill__flex .skill__left {
+        display: none;
+    }
+    .skill__flex .skill__right {
+        width: 100%;
+    }
+    .text-title .right .HIDDEN {
+    }
+    .skill__flex .skill__right .HIDDEN p {
+        text-align: start;
+        font-size: 6.5vw;
+        padding: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .skill__flex__box .my__skill {
+        width: 89vw !important;
+        height: 59vw !important;
+    }
+    .skill__flex__box .my__skill .sub__tit {
+        font-size: 4vw !important;
+    }
+    .skill__flex__box .my__skill .sub__desc {
+        font-size: 3vw !important;
+    }
+    
+    .skill__inner .skill__scrollBar {
+        justify-content: start;
+        padding-left: 3%;
+    }
+
+    .skill__inner .skill__scrollBar .bar {
+        display: none;
+    }
+    .skill__inner .skill__scrollBar .scroll__num {
+        width: 20%;
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .skill__inner .skill__scrollBar .scroll__num span {
+        font-size: 4vw !important;
+    }
+    .skill__inner .skill__scrollBar .rem {
+        width: 50%;
+        padding-left: 0;
+    }
+    .skill__inner .skill__scrollBar .rem div {
+        width: 7vw;
+        height: 7vw;
+    }
+    .skill__inner .skill__scrollBar .rem .prev {
+        margin-right: 2vw;
+    }
+    .skill__inner .skill__scrollBar .rem div svg {
+        width: 2vw;
+        height: 2vw;
+    }
 }
